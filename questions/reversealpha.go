@@ -1,4 +1,4 @@
-package main
+package questions
 
 func isAlpha(char rune) bool {
 	if char >= 'A' && char <= 'Z' || char >= 'a' && char <= 'z' {
