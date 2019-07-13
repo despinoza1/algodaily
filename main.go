@@ -34,4 +34,7 @@ func main() {
 	//Day 4: Reverse alphabetic characters only
 	fmt.Println("sea!$hells3 alphabetic characeters reversed: ", ReverseAlphaChars("sea!$hells3"))
 	fmt.Println("1kas90jda3 alphabetic characeters reversed: ", ReverseAlphaChars("1kas90jda3"))
+
+	//Day 5: FizzBuzz
+	fmt.Println("Fizzbuzz to 15: ", FizzBuzz(15))
 }
