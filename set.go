@@ -1,15 +1,50 @@
 package main
 
+import "strconv"
+
 // Set implementation using a hash map
 type Set struct {
-	list map[int]struct{}
+	list map[interface{}]struct{}
 }
 
-// NewSet creates and initializes a new Set
-func NewSet() *Set {
+// NewEmptySet creates an empty Set
+func NewEmptySet() *Set {
 	newSet := &Set{}
-	newSet.list = make(map[int]struct{})
+	newSet.list = make(map[interface{}]struct{})
 	return newSet
+}
+
+// NewSet creates and initializes a Set
+func NewSet(data ...interface{}) *Set {
+	s := NewEmptySet()
+
+	for _, arg := range data {
+		switch v := arg.(type) {
+		case []int:
+			for _, element := range v {
+				s.Add(element)
+			}
+		case []string:
+			for _, element := range v {
+				s.Add(element)
+			}
+		case int:
+			s.Add(v)
+		case string:
+			s.Add(v)
+		default:
+			panic("Unsupported datatype")
+		}
+	}
+
+	return s
+}
+
+// Add inserts new value/s into set
+func (set *Set) Add(arr ...interface{}) {
+	for _, v := range arr {
+		set.list[v] = struct{}{}
+	}
 }
 
 // Intersects checks if two sets intersect
@@ -24,34 +59,34 @@ func (set *Set) Intersects(other *Set) bool {
 }
 
 // Intersection returns the intersection set
-func Intersection(nums1 []int, nums2 []int) *Set {
-	s1 := &Set{}
-	s2 := &Set{}
+func (set *Set) Intersection(other *Set) *Set {
+	res := NewSet()
 
-	s1.list = make(map[int]struct{})
-	s2.list = make(map[int]struct{})
-
-	for _, v := range nums1 {
-		s1.list[v] = struct{}{}
-	}
-
-	for _, v := range nums2 {
-		s2.list[v] = struct{}{}
-	}
-
-	res := &Set{}
-	res.list = make(map[int]struct{})
-
-	for v := range s1.list {
-		_, ok := s2.list[v]
+	for v := range set.list {
+		_, ok := other.list[v]
 		if !ok {
 			continue
 		}
 		res.list[v] = struct{}{}
 	}
 
-	/*for v := range res.list {
-		fmt.Println(v)
-	} */
 	return res
+}
+
+func (set *Set) String() string {
+	str := []rune("Set{")
+
+	for k := range set.list {
+		switch v := k.(type) {
+		case int:
+			str = append(str, []rune(strconv.Itoa(v))...)
+		case string:
+			str = append(str, []rune(strconv.Quote(v))...)
+		}
+		str = append(str, []rune(", ")...)
+	}
+
+	str[len(str)-2] = rune('}')
+
+	return string(str)
 }
