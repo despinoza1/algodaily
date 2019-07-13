@@ -31,5 +31,7 @@ func main() {
 	fmt.Println("Is racecar a palindrome? ", Palindrome("racecar"))
 	fmt.Println("Is burger a palindrome? ", Palindrome("burger"))
 
-	//Day 4
+	//Day 4: Reverse alphabetic characters only
+	fmt.Println("sea!$hells3 alphabetic characeters reversed: ", ReverseAlphaChars("sea!$hells3"))
+	fmt.Println("1kas90jda3 alphabetic characeters reversed: ", ReverseAlphaChars("1kas90jda3"))
 }
