@@ -31,4 +31,9 @@ func main() {
 	//Day 5: FizzBuzz
 	fmt.Println("Fizzbuzz to 15: ", questions.FizzBuzz(15))
 	fmt.Println()
+
+	//Day 6: Lonely Number
+	fmt.Println("Lonely number in [4, 4, 6, 1, 3, 1, 3]: ", questions.LonelyNumber([]int{4, 4, 6, 1, 3, 1, 3}))
+	fmt.Println("Lonely number in [3, 3, 9]: ", questions.LonelyNumber([]int{3, 3, 9}))
+	fmt.Println("Lonely number in [1]: ", questions.LonelyNumber([]int{1}))
 }
