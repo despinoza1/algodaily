@@ -36,4 +36,10 @@ func main() {
 	fmt.Println("Lonely number in [4, 4, 6, 1, 3, 1, 3]: ", questions.LonelyNumber([]int{4, 4, 6, 1, 3, 1, 3}))
 	fmt.Println("Lonely number in [3, 3, 9]: ", questions.LonelyNumber([]int{3, 3, 9}))
 	fmt.Println("Lonely number in [1]: ", questions.LonelyNumber([]int{1}))
+
+	//Day 7: Power of Three
+	fmt.Println("Is 9 a power of three? ", questions.PowerOfThree(9))
+	fmt.Println("Is 7 a power of three? ", questions.PowerOfThree(7))
+	fmt.Println("Is 729 a power of three? ", questions.PowerOfThree(729))
+	fmt.Println("Is 6 a power of three? ", questions.PowerOfThree(6))
 }
