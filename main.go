@@ -49,4 +49,22 @@ func main() {
 	fmt.Println("Is 513 a power of eight? ", questions.IsPowerOf(513, 8))
 	fmt.Println("Is 625 a power of five? ", questions.IsPowerOf(625, 5))
 	fmt.Println("Is 256 a power of two? ", questions.IsPowerOf(256, 2))
+	fmt.Println()
+
+	//Day 8: Hash Map
+	names := [4]string{"Bob", "James", "John", "Maria"}
+
+	dict := questions.NewMap(2)
+
+	dict.Set("Bob", 3000)
+	dict.Set("James", 2100.01)
+	dict.Set("John", "Doe")
+	dict.Set("Maria", [4]interface{}{1, 2, "Hello", 3.14})
+
+	for _, name := range names {
+		if value, err := dict.Get(name); err == nil {
+			fmt.Printf("dict[%q]=%v\n", name, value)
+		}
+	}
+	fmt.Println()
 }
