@@ -36,10 +36,17 @@ func main() {
 	fmt.Println("Lonely number in [4, 4, 6, 1, 3, 1, 3]: ", questions.LonelyNumber([]int{4, 4, 6, 1, 3, 1, 3}))
 	fmt.Println("Lonely number in [3, 3, 9]: ", questions.LonelyNumber([]int{3, 3, 9}))
 	fmt.Println("Lonely number in [1]: ", questions.LonelyNumber([]int{1}))
+	fmt.Println()
 
 	//Day 7: Power of Three
 	fmt.Println("Is 9 a power of three? ", questions.PowerOfThree(9))
 	fmt.Println("Is 7 a power of three? ", questions.PowerOfThree(7))
 	fmt.Println("Is 729 a power of three? ", questions.PowerOfThree(729))
 	fmt.Println("Is 6 a power of three? ", questions.PowerOfThree(6))
+	fmt.Println()
+
+	fmt.Println("Is 81 a power of three? ", questions.IsPowerOf(81, 3))
+	fmt.Println("Is 513 a power of eight? ", questions.IsPowerOf(513, 8))
+	fmt.Println("Is 625 a power of five? ", questions.IsPowerOf(625, 5))
+	fmt.Println("Is 256 a power of two? ", questions.IsPowerOf(256, 2))
 }
