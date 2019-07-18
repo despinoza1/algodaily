@@ -67,4 +67,23 @@ func main() {
 		}
 	}
 	fmt.Println()
+
+	//Day 9: Binary Tree In Order Traversal
+	var tree questions.BinaryTree = questions.NewTree(8)
+	tree.Add(5)
+	tree.Add(17)
+	tree.Add(22)
+	tree.Add(6)
+	tree.Add(3)
+	tree.Add(1)
+	tree.Add(13)
+	tree.Add(7)
+
+	fmt.Print("Tree In Order: ")
+	tree.InOrder()
+	fmt.Print("\nTree Post Order: ")
+	tree.PostOrder()
+	fmt.Print("\nTree Pre Order: ")
+	tree.PreOrder()
+	fmt.Print("\n", tree)
 }
