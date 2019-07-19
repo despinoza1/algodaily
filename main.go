@@ -93,4 +93,10 @@ func main() {
 	fmt.Println("First Nonrepeat of \"hello world\": ", questions.FirstNonRepeat("hello world"))
 	fmt.Println("First Nonrepeat of \"asdfsdafdasfjdfsafnnunlfdffvxcvsfansd\": ", questions.FirstNonRepeat("asdfsdafdasfjdfsafnnunlfdffvxcvsfansd"))
 	fmt.Println()
+
+	//Day 11: Sum Digits
+	fmt.Println("SumDigits(49): ", questions.SumDigits(49))
+	fmt.Println("SumDigits(1): ", questions.SumDigits(1))
+	fmt.Println("SumDigits(439230): ", questions.SumDigits(439230))
+	fmt.Println()
 }
