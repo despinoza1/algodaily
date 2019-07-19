@@ -85,5 +85,12 @@ func main() {
 	tree.PostOrder()
 	fmt.Print("\nTree Pre Order: ")
 	tree.PreOrder()
-	fmt.Print("\n", tree)
+	fmt.Println()
+
+	//Day 10: First Nonrepeating value
+	fmt.Println("First Nonrepeat of \"\": ", questions.FirstNonRepeat(""))
+	fmt.Println("First Nonrepeat of \"a\": ", questions.FirstNonRepeat("a"))
+	fmt.Println("First Nonrepeat of \"hello world\": ", questions.FirstNonRepeat("hello world"))
+	fmt.Println("First Nonrepeat of \"asdfsdafdasfjdfsafnnunlfdffvxcvsfansd\": ", questions.FirstNonRepeat("asdfsdafdasfjdfsafnnunlfdffvxcvsfansd"))
+	fmt.Println()
 }
