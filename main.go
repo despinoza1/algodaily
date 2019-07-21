@@ -99,4 +99,17 @@ func main() {
 	fmt.Println("SumDigits(1): ", questions.SumDigits(1))
 	fmt.Println("SumDigits(439230): ", questions.SumDigits(439230))
 	fmt.Println()
+
+	//Day 12: $ Deletion
+	fmt.Println("['f$ec', 'ec']: ", questions.DollarSignDeletion([]string{"f$ec", "ec"}))
+	fmt.Println("['ab$$', 'c$d$']: ", questions.DollarSignDeletion([]string{"ab$$", "c$d$"}))
+	fmt.Println("['b$$p', '$b$p']: ", questions.DollarSignDeletion([]string{"b$$p", "$b$p"}))
+	fmt.Println("['e$ec', 'ec', 'as$$ec]: ", questions.DollarSignDeletion([]string{"e$ec", "ec", "as$$ec"}))
+	fmt.Println()
+
+	//Day 13: Detect Substring
+	fmt.Println("Index of flew in thepigflewwow: ", questions.DetectSubStr("thepigflewwow", "flew"))
+	fmt.Println("Index of two in twocanplay: ", questions.DetectSubStr("twocanplay", "two"))
+	fmt.Println("Index of pork in wherearemyshorts: ", questions.DetectSubStr("wherearemyshorts", "pork"))
+	fmt.Println()
 }
