@@ -112,4 +112,8 @@ func main() {
 	fmt.Println("Index of two in twocanplay: ", questions.DetectSubStr("twocanplay", "two"))
 	fmt.Println("Index of pork in wherearemyshorts: ", questions.DetectSubStr("wherearemyshorts", "pork"))
 	fmt.Println()
+
+	//Day 14: Missing in Unsorted Array
+	fmt.Println("Missing number from [2, 5, 1, 4, 9, 6, 3, 7]: ", questions.MissingInUnsorted([]int{2, 5, 1, 4, 9, 6, 3, 7}, 1, 9))
+	fmt.Println()
 }
