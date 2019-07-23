@@ -88,10 +88,14 @@ func main() {
 	fmt.Println()
 
 	//Day 10: First Nonrepeating value
-	fmt.Println("First Nonrepeat of \"\": ", questions.FirstNonRepeat(""))
-	fmt.Println("First Nonrepeat of \"a\": ", questions.FirstNonRepeat("a"))
-	fmt.Println("First Nonrepeat of \"hello world\": ", questions.FirstNonRepeat("hello world"))
-	fmt.Println("First Nonrepeat of \"asdfsdafdasfjdfsafnnunlfdffvxcvsfansd\": ", questions.FirstNonRepeat("asdfsdafdasfjdfsafnnunlfdffvxcvsfansd"))
+	fmt.Println("First Nonrepeat of \"\": ",
+		questions.FirstNonRepeat(""))
+	fmt.Println("First Nonrepeat of \"a\": ",
+		questions.FirstNonRepeat("a"))
+	fmt.Println("First Nonrepeat of \"hello world\": ",
+		questions.FirstNonRepeat("hello world"))
+	fmt.Println("First Nonrepeat of \"asdfsdafdasfjdfsafnnunlfdffvxcvsfansd\": ",
+		questions.FirstNonRepeat("asdfsdafdasfjdfsafnnunlfdffvxcvsfansd"))
 	fmt.Println()
 
 	//Day 11: Sum Digits
@@ -101,19 +105,34 @@ func main() {
 	fmt.Println()
 
 	//Day 12: $ Deletion
-	fmt.Println("['f$ec', 'ec']: ", questions.DollarSignDeletion([]string{"f$ec", "ec"}))
-	fmt.Println("['ab$$', 'c$d$']: ", questions.DollarSignDeletion([]string{"ab$$", "c$d$"}))
-	fmt.Println("['b$$p', '$b$p']: ", questions.DollarSignDeletion([]string{"b$$p", "$b$p"}))
-	fmt.Println("['e$ec', 'ec', 'as$$ec]: ", questions.DollarSignDeletion([]string{"e$ec", "ec", "as$$ec"}))
+	fmt.Println("['f$ec', 'ec']: ",
+		questions.DollarSignDeletion([]string{"f$ec", "ec"}))
+	fmt.Println("['ab$$', 'c$d$']: ",
+		questions.DollarSignDeletion([]string{"ab$$", "c$d$"}))
+	fmt.Println("['b$$p', '$b$p']: ",
+		questions.DollarSignDeletion([]string{"b$$p", "$b$p"}))
+	fmt.Println("['e$ec', 'ec', 'as$$ec]: ",
+		questions.DollarSignDeletion([]string{"e$ec", "ec", "as$$ec"}))
 	fmt.Println()
 
 	//Day 13: Detect Substring
-	fmt.Println("Index of flew in thepigflewwow: ", questions.DetectSubStr("thepigflewwow", "flew"))
-	fmt.Println("Index of two in twocanplay: ", questions.DetectSubStr("twocanplay", "two"))
-	fmt.Println("Index of pork in wherearemyshorts: ", questions.DetectSubStr("wherearemyshorts", "pork"))
+	fmt.Println("Index of flew in thepigflewwow: ",
+		questions.DetectSubStr("thepigflewwow", "flew"))
+	fmt.Println("Index of two in twocanplay: ",
+		questions.DetectSubStr("twocanplay", "two"))
+	fmt.Println("Index of pork in wherearemyshorts: ",
+		questions.DetectSubStr("wherearemyshorts", "pork"))
 	fmt.Println()
 
 	//Day 14: Missing in Unsorted Array
-	fmt.Println("Missing number from [2, 5, 1, 4, 9, 6, 3, 7]: ", questions.MissingInUnsorted([]int{2, 5, 1, 4, 9, 6, 3, 7}, 1, 9))
+	fmt.Println("Missing number from [2, 5, 1, 4, 9, 6, 3, 7]: ",
+		questions.MissingInUnsorted([]int{2, 5, 1, 4, 9, 6, 3, 7}, 1, 9))
+	fmt.Println()
+
+	//Day 15: Max of Min Pairs
+	fmt.Println("Max of min pairs from [3, 4, 2, 5]: ",
+		questions.MaxOfMinPairs([]int{3, 4, 2, 5}))
+	fmt.Println("Max of min pairs from [1, 3, 2, 6, 5, 4]: ",
+		questions.MaxOfMinPairs([]int{1, 3, 2, 6, 5, 4}))
 	fmt.Println()
 }
