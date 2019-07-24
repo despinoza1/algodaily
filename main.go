@@ -135,4 +135,13 @@ func main() {
 	fmt.Println("Max of min pairs from [1, 3, 2, 6, 5, 4]: ",
 		questions.MaxOfMinPairs([]int{1, 3, 2, 6, 5, 4}))
 	fmt.Println()
+
+	//Day 16: Contiguous Subarray Sum
+	fmt.Println("Is 3 a contiguous subarray sum []: ",
+		questions.SubArraySum([]int{}, 3))
+	fmt.Println("Is 3 a contiguous subarray sum [1, 2, 3]: ",
+		questions.SubArraySum([]int{1, 2, 3}, 3))
+	fmt.Println("Is 47 a contiguous subarray sum [3, 6, 12, 35]: ",
+		questions.SubArraySum([]int{3, 6, 12, 35}, 47))
+	fmt.Println()
 }
