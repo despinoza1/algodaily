@@ -144,4 +144,13 @@ func main() {
 	fmt.Println("Is 47 a contiguous subarray sum [3, 6, 12, 35]: ",
 		questions.SubArraySum([]int{3, 6, 12, 35}, 47))
 	fmt.Println()
+
+	//Day 17: Sum of Primes
+	fmt.Println("Sum of primes less than 2: ",
+		questions.SumPrimes(2))
+	fmt.Println("Sum of primes less than 30: ",
+		questions.SumPrimes(30))
+	fmt.Println("Sum of primes less than 55: ",
+		questions.SumPrimes(55))
+	fmt.Println()
 }
