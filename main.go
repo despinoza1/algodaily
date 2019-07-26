@@ -153,4 +153,11 @@ func main() {
 	fmt.Println("Sum of primes less than 55: ",
 		questions.SumPrimes(55))
 	fmt.Println()
+
+	//Day 18: Min in Rotated Array
+	fmt.Println("Minimum number in [6, 7, 8, 0, 1, 2, 3, 4, 5]: ",
+		questions.MinInRotArray([]int{6, 7, 8, 0, 1, 2, 3, 4, 5}))
+	fmt.Println("Minimum number in [6, 7, 8, 9, 10, 3, 4, 5]: ",
+		questions.MinInRotArray([]int{6, 7, 8, 9, 10, 3, 4, 5}))
+	fmt.Println()
 }
