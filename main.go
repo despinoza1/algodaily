@@ -160,4 +160,17 @@ func main() {
 	fmt.Println("Minimum number in [6, 7, 8, 9, 10, 3, 4, 5]: ",
 		questions.MinInRotArray([]int{6, 7, 8, 9, 10, 3, 4, 5}))
 	fmt.Println()
+
+	//Day 19 & 20: Uniqueness of Arrays
+	fmt.Println("Unique elements in [8,8,15,6,19,7,12,6,6,3,13,9,15,14,1,13,4,11,16]:\n\t",
+		questions.UniqueInArray([]int{8, 8, 15, 6, 19, 7, 12, 6, 6, 3, 13, 9, 15, 14, 1, 13, 4, 11, 16}))
+	fmt.Println("Unique elements in [12,7,2,20,20,2,15,20,2,10,12,1]:\n\t",
+		questions.UniqueInArray([]int{12, 7, 2, 20, 20, 2, 15, 20, 2, 10, 12, 1}))
+	fmt.Println("Unique elements in [6,12,5,1,4,18,10,17,10,0,1,7,6,18,11,2,15,19]:\n\t",
+		questions.UniqueInArray([]int{6, 12, 5, 1, 4, 18, 10, 17, 10, 0, 1, 7, 6, 18, 11, 2, 15, 19}))
+	fmt.Println("Unique elements in [9,0,11,16,19,14,7,18,10,6,0,17,12,9,12,18,0,14,17]:\n\t",
+		questions.UniqueInArray([]int{9, 0, 11, 16, 19, 14, 7, 18, 10, 6, 0, 17, 12, 9, 12, 18, 0, 14, 17}))
+	fmt.Println("Unique elements in [5,10,3,17,9,12,19,4,16,19,7,9,7,8,10]:\n\t",
+		questions.UniqueInArray([]int{5, 10, 3, 17, 9, 12, 19, 4, 16, 19, 7, 9, 7, 8, 10}))
+	fmt.Println()
 }
