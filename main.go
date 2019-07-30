@@ -173,4 +173,13 @@ func main() {
 	fmt.Println("Unique elements in [5,10,3,17,9,12,19,4,16,19,7,9,7,8,10]:\n\t",
 		questions.UniqueInArray([]int{5, 10, 3, 17, 9, 12, 19, 4, 16, 19, 7, 9, 7, 8, 10}))
 	fmt.Println()
+
+	//Day 22: Treats Distribution
+	fmt.Println("Treat Distribution of [2, 2, 3, 3, 4, 4]:\n\t",
+		questions.TreatDistribution([]int{2, 2, 3, 3, 4, 4}))
+	fmt.Println("Treat Distribution of [1, 1, 2, 4]:\n\t",
+		questions.TreatDistribution([]int{1, 1, 2, 4}))
+	fmt.Println("Treat Distribution of [7, 7]:\n\t",
+		questions.TreatDistribution([]int{7, 7}))
+	fmt.Println()
 }
