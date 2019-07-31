@@ -182,4 +182,13 @@ func main() {
 	fmt.Println("Treat Distribution of [7, 7]:\n\t",
 		questions.TreatDistribution([]int{7, 7}))
 	fmt.Println()
+
+	//Day 23: Least Missing Positive Number
+	fmt.Println("Least Missing Positive Number of [3, 5, -1, 1]:\n\t",
+		questions.LeastPositiveNumber([]int{3, 5, -1, 1}))
+	fmt.Println("Least Missing Positive Number of [5, 6, 7, 8, 9]:\n\t",
+		questions.LeastPositiveNumber([]int{5, 6, 7, 8, 9}))
+	fmt.Println("Least Missing Positive Number of []:\n\t",
+		questions.LeastPositiveNumber([]int{}))
+	fmt.Println()
 }
