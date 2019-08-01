@@ -191,4 +191,15 @@ func main() {
 	fmt.Println("Least Missing Positive Number of []:\n\t",
 		questions.LeastPositiveNumber([]int{}))
 	fmt.Println()
+
+	//Day 24: Product Except Self
+	fmt.Println("Product Except Self of []:\n\t",
+		questions.ProductExceptSelf([]int{}))
+	fmt.Println("Product Except Self of [7,8,5,18,16,11,20]:\n\t",
+		questions.ProductExceptSelf([]int{7, 8, 5, 18, 16, 11, 20}))
+	fmt.Println("Product Except Self of [2,0,9,19,7,10,17,3,10,11,3,3,17,18,19]:\n\t",
+		questions.ProductExceptSelf([]int{2, 0, 9, 19, 7, 10, 17, 3, 10, 11, 3, 3, 17, 18, 19}))
+	fmt.Println("Product Except Self of [9,9,3,4,18,8,6,18,1,6,19]:\n\t",
+		questions.ProductExceptSelf([]int{9, 9, 3, 4, 18, 8, 6, 18, 1, 6, 19}))
+	fmt.Println()
 }
