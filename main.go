@@ -202,4 +202,59 @@ func main() {
 	fmt.Println("Product Except Self of [9,9,3,4,18,8,6,18,1,6,19]:\n\t",
 		questions.ProductExceptSelf([]int{9, 9, 3, 4, 18, 8, 6, 18, 1, 6, 19}))
 	fmt.Println()
+
+	//Day 25: Two Sum
+	fmt.Println("Indices of [1, 9, 13, 20, 47] that sum to 10:\n\t",
+		questions.TwoSum([]int{1, 9, 13, 20, 47}, 10))
+	fmt.Println("Indices of [3, 2, 4, 1, 9] that sum to 12:\n\t",
+		questions.TwoSum([]int{3, 2, 4, 1, 9}, 12))
+	fmt.Println("Indices of [] that sum to 10:\n\t",
+		questions.TwoSum([]int{}, 10))
+	fmt.Println()
+
+	//Day 26: Intersection of Linked List
+	list1 := questions.NewDoublyLinkedList(4)
+	list2 := questions.NewDoublyLinkedList(2)
+
+	for _, val := range []int{5, 6, 7, 8, 9, 10} {
+		list1.Append(val)
+	}
+	for _, val := range []int{3, 4, 5, 6, 7, 8} {
+		list2.Append(val)
+	}
+
+	fmt.Println("The intersection of [4, 5, 6, 7, 8, 9, 10] and [2, 3, 4, 5, 6, 7, 8] is:\n\t",
+		questions.GetIntersection(*list1, *list2))
+	fmt.Println()
+
+	//Day 27: Get a random node from linked list
+	fmt.Println("Random node from the list [4, 5, 6, 7, 8, 9, 10]:\n\t",
+		questions.GetRandomNode(*list1))
+	fmt.Println()
+
+	//Day 28: Swap every pair of elements of linked list
+	list1.SwapEveryTwo()
+	fmt.Println("Every two nodes swapped from the list [4, 5, 6, 7, 8, 9, 10]:\n\t",
+		list1)
+	fmt.Println()
+
+	//Day 29: Get Union of two linked list
+	union := questions.GetUnion(*list1, *list2)
+	fmt.Println("Union of two linked list:\n\t",
+		union)
+	fmt.Println()
+
+	//Day 30: Delete node from linked list
+	list1.Delete(6)
+	fmt.Println("Linked list after deletting node with value 6:\n\t",
+		list1)
+	fmt.Println()
+
+	//Day 32: Fibonacci Sequence
+	fmt.Println("The 1st number in the Fibonacci Sequence: ",
+		questions.FibonacciSequence(1))
+	fmt.Println("The 17th number in the Fibonacci Sequence: ",
+		questions.FibonacciSequence(17))
+	fmt.Println("The 85th number in the Fibonacci Sequence: ",
+		questions.FibonacciSequence(85))
 }
