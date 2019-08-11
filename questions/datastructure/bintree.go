@@ -99,5 +99,5 @@ func (n *Node) IsValid() bool {
 		return false
 	}
 
-	return true && n.left.IsValid() && n.right.IsValid()
+	return n.left.IsValid() && n.right.IsValid()
 }

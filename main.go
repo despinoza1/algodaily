@@ -258,8 +258,10 @@ func main() {
 		questions.FibonacciSequence(17))
 	fmt.Println("The 85th number in the Fibonacci Sequence: ",
 		questions.FibonacciSequence(85))
+	fmt.Println()
 
 	//Day 33: Is valid BST
 	fmt.Println("Is the Binary tree valid: ",
 		tree.IsValid())
+	fmt.Println()
 }
