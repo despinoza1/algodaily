@@ -7,6 +7,7 @@ type BinaryTree interface {
 	InOrder()
 	PreOrder()
 	PostOrder()
+	IsValid() bool
 	Add(interface{})
 }
 
@@ -89,10 +90,14 @@ func preOrder(n *Node) {
 }
 
 // IsValid checks if the BST is valid
-func IsValid(root *Node) bool {
-	if root.value < root.left.value || root.value > root.right.value {
+func (n *Node) IsValid() bool {
+	if n == nil {
+		return true
+	}
+
+	if n.left != nil && n.value < n.left.value || n.right != nil && n.value > n.right.value {
 		return false
 	}
 
-	return true && IsValid(root.left) && IsValid(root.right)
+	return true && n.left.IsValid() && n.right.IsValid()
 }
