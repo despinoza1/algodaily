@@ -2,13 +2,14 @@ package main
 
 import (
 	"algodaily/questions"
+	"algodaily/questions/datastructure"
 	"fmt"
 )
 
 func main() {
 	//Day 1: Intersection between two arrays
-	set1 := questions.NewSet([]int{2, 4, 6})
-	set2 := questions.NewSet([]int{2, 4, 9, 20})
+	set1 := datastructure.NewSet([]int{2, 4, 6})
+	set2 := datastructure.NewSet([]int{2, 4, 9, 20})
 	fmt.Println(set1.Intersection(set2))
 	fmt.Println()
 
@@ -54,7 +55,7 @@ func main() {
 	//Day 8: Hash Map
 	names := [4]string{"Bob", "James", "John", "Maria"}
 
-	dict := questions.NewMap(2)
+	dict := datastructure.NewMap(2)
 
 	dict.Set("Bob", 3000)
 	dict.Set("James", 2100.01)
@@ -69,7 +70,7 @@ func main() {
 	fmt.Println()
 
 	//Day 9: Binary Tree In Order Traversal
-	var tree questions.BinaryTree = questions.NewTree(8)
+	var tree datastructure.BinaryTree = datastructure.NewTree(8)
 	tree.Add(5)
 	tree.Add(17)
 	tree.Add(22)
@@ -213,8 +214,8 @@ func main() {
 	fmt.Println()
 
 	//Day 26: Intersection of Linked List
-	list1 := questions.NewDoublyLinkedList(4)
-	list2 := questions.NewDoublyLinkedList(2)
+	list1 := datastructure.NewDoublyLinkedList(4)
+	list2 := datastructure.NewDoublyLinkedList(2)
 
 	for _, val := range []int{5, 6, 7, 8, 9, 10} {
 		list1.Append(val)
@@ -224,12 +225,12 @@ func main() {
 	}
 
 	fmt.Println("The intersection of [4, 5, 6, 7, 8, 9, 10] and [2, 3, 4, 5, 6, 7, 8] is:\n\t",
-		questions.GetIntersection(*list1, *list2))
+		datastructure.GetIntersection(*list1, *list2))
 	fmt.Println()
 
 	//Day 27: Get a random node from linked list
 	fmt.Println("Random node from the list [4, 5, 6, 7, 8, 9, 10]:\n\t",
-		questions.GetRandomNode(*list1))
+		datastructure.GetRandomNode(*list1))
 	fmt.Println()
 
 	//Day 28: Swap every pair of elements of linked list
@@ -239,7 +240,7 @@ func main() {
 	fmt.Println()
 
 	//Day 29: Get Union of two linked list
-	union := questions.GetUnion(*list1, *list2)
+	union := datastructure.GetUnion(*list1, *list2)
 	fmt.Println("Union of two linked list:\n\t",
 		union)
 	fmt.Println()

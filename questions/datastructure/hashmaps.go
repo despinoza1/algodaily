@@ -1,4 +1,4 @@
-package questions
+package datastructure
 
 // HashMap basic hash table implementation
 type HashMap interface {

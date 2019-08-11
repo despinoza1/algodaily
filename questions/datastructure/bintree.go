@@ -1,4 +1,4 @@
-package questions
+package datastructure
 
 import "fmt"
 
@@ -86,4 +86,13 @@ func preOrder(n *Node) {
 	fmt.Printf("%d ", n.value)
 	inOrder(n.left)
 	inOrder(n.right)
+}
+
+// IsValid checks if the BST is valid
+func IsValid(root *Node) bool {
+	if root.value < root.left.value || root.value > root.right.value {
+		return false
+	}
+
+	return true && IsValid(root.left) && IsValid(root.right)
 }
