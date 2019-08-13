@@ -264,4 +264,9 @@ func main() {
 	fmt.Println("Is the Binary tree valid: ",
 		tree.IsValid())
 	fmt.Println()
+
+	//Day 34: Bottom leftmost node
+	fmt.Println("Bottom leftmost node's value: ",
+		tree.BottomLeftNode())
+	fmt.Println()
 }

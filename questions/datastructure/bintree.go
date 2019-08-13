@@ -8,6 +8,7 @@ type BinaryTree interface {
 	PreOrder()
 	PostOrder()
 	IsValid() bool
+	BottomLeftNode() int
 	Add(interface{})
 }
 
@@ -100,4 +101,25 @@ func (n *Node) IsValid() bool {
 	}
 
 	return n.left.IsValid() && n.right.IsValid()
+}
+
+// BottomLeftNode gets the bottom leftmost value
+func (n Node) BottomLeftNode() int {
+	curr := &n
+	queue := make([]*Node, 0)
+	queue = append(queue, curr)
+
+	for len(queue) > 0 {
+		curr = queue[0]
+		queue = queue[1:]
+
+		if curr.right != nil {
+			queue = append(queue, curr.right)
+		}
+		if curr.left != nil {
+			queue = append(queue, curr.left)
+		}
+	}
+
+	return curr.value
 }
