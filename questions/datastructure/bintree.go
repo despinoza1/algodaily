@@ -9,6 +9,7 @@ type BinaryTree interface {
 	PostOrder()
 	IsValid() bool
 	BottomLeftNode() int
+	MeanOfLevels() []float32
 	Add(interface{})
 }
 
@@ -122,4 +123,39 @@ func (n Node) BottomLeftNode() int {
 	}
 
 	return curr.value
+}
+
+// MeanOfLevels gets the mean of each level on the tree
+func (n *Node) MeanOfLevels() []float32 {
+	means := make([]float32, 0)
+	queue := make([]*Node, 0)
+	var lvlSize int
+	var sum float32
+	var curr *Node
+
+	queue = append(queue, n)
+
+	for len(queue) > 0 {
+		lvlSize = len(queue)
+
+		for i := 0; i < lvlSize; i++ {
+			curr = queue[0]
+			queue = queue[1:]
+
+			if curr.right != nil {
+				queue = append(queue, curr.right)
+			}
+
+			if curr.left != nil {
+				queue = append(queue, curr.left)
+			}
+
+			sum += float32(curr.value)
+		}
+
+		means = append(means, sum/float32(lvlSize))
+		sum = 0
+	}
+
+	return means
 }

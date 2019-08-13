@@ -269,4 +269,8 @@ func main() {
 	fmt.Println("Bottom leftmost node's value: ",
 		tree.BottomLeftNode())
 	fmt.Println()
+
+	//Day 35: Means of each Level
+	fmt.Println("Means of each level of tree: ", tree.MeanOfLevels())
+	fmt.Println()
 }
