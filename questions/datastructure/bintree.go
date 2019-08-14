@@ -4,12 +4,14 @@ import "fmt"
 
 // BinaryTree is a binary tree interface
 type BinaryTree interface {
+	getRoot() *Node
 	InOrder()
 	PreOrder()
 	PostOrder()
 	IsValid() bool
 	BottomLeftNode() int
 	MeanOfLevels() []float32
+	AreIdentical(BinaryTree) bool
 	Add(interface{})
 }
 
@@ -23,6 +25,10 @@ type Node struct {
 // NewTree returns a root node for a binary tree
 func NewTree(rootValue interface{}) *Node {
 	return &Node{nil, nil, rootValue.(int)}
+}
+
+func (n *Node) getRoot() *Node {
+	return n
 }
 
 // Add inserts a new value into binary tree
@@ -158,4 +164,27 @@ func (n *Node) MeanOfLevels() []float32 {
 	}
 
 	return means
+}
+
+// AreIdentical checks if two trees are identical
+func (n *Node) AreIdentical(t2 BinaryTree) bool {
+	n2 := t2.getRoot()
+
+	return identicalTrees(n, n2)
+}
+
+func identicalTrees(n1, n2 *Node) bool {
+	if n1 == nil && n2 == nil {
+		return true
+	}
+
+	if n1 == nil || n2 == nil {
+		return false
+	}
+
+	if n1.value == n2.value {
+		return identicalTrees(n1.left, n2.left) && identicalTrees(n1.right, n2.right)
+	}
+
+	return false
 }

@@ -273,4 +273,29 @@ func main() {
 	//Day 35: Means of each Level
 	fmt.Println("Means of each level of tree: ", tree.MeanOfLevels())
 	fmt.Println()
+
+	//Day 36: Are trees identical
+	tree2 := datastructure.NewTree(8)
+	tree2.Add(5)
+	tree2.Add(17)
+	tree2.Add(22)
+	tree2.Add(6)
+	tree2.Add(3)
+	tree2.Add(1)
+	tree2.Add(13)
+	tree2.Add(7)
+
+	tree3 := datastructure.NewTree(5)
+	tree3.Add(5)
+	tree3.Add(17)
+	tree3.Add(22)
+	tree3.Add(6)
+	tree3.Add(3)
+	tree3.Add(1)
+	tree3.Add(13)
+	tree3.Add(7)
+
+	fmt.Println("Are tree1 and tree2 identical: ", tree.AreIdentical(tree2))
+	fmt.Println("Are tree1 and tree3 identical: ", tree.AreIdentical(tree3))
+	fmt.Println()
 }
