@@ -298,4 +298,9 @@ func main() {
 	fmt.Println("Are tree1 and tree2 identical: ", tree.AreIdentical(tree2))
 	fmt.Println("Are tree1 and tree3 identical: ", tree.AreIdentical(tree3))
 	fmt.Println()
+
+	//Day 37: Max of each level
+	fmt.Println("Max of each level of tree: ", tree.MaxOfLevels())
+	fmt.Println("Max of each level of tree: ", tree3.MaxOfLevels())
+	fmt.Println()
 }

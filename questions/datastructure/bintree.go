@@ -11,6 +11,7 @@ type BinaryTree interface {
 	IsValid() bool
 	BottomLeftNode() int
 	MeanOfLevels() []float32
+	MaxOfLevels() []int
 	AreIdentical(BinaryTree) bool
 	Add(interface{})
 }
@@ -187,4 +188,42 @@ func identicalTrees(n1, n2 *Node) bool {
 	}
 
 	return false
+}
+
+// MaxOfLevels gets the max of each level of a binary tree
+func (n *Node) MaxOfLevels() []int {
+	maxs := make([]int, 0)
+	queue := make([]*Node, 0)
+	var lvlSize int
+	var max int
+	var curr *Node
+
+	queue = append(queue, n)
+
+	for len(queue) > 0 {
+		lvlSize = len(queue)
+		max = -1 << 63
+
+		for i := 0; i < lvlSize; i++ {
+			curr = queue[0]
+			queue = queue[1:]
+
+			if curr.right != nil {
+				queue = append(queue, curr.right)
+			}
+
+			if curr.left != nil {
+				queue = append(queue, curr.left)
+			}
+
+			if max < curr.value {
+				max = curr.value
+			}
+		}
+
+		maxs = append(maxs, max)
+		max = 0
+	}
+
+	return maxs
 }
