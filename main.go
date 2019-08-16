@@ -303,4 +303,30 @@ func main() {
 	fmt.Println("Max of each level of tree: ", tree.MaxOfLevels())
 	fmt.Println("Max of each level of tree: ", tree3.MaxOfLevels())
 	fmt.Println()
+
+	//Day 38: Graph
+	graph := datastructure.NewUndirectedGraph()
+
+	graph.AddVertex('A')
+	graph.AddVertex('B')
+	graph.AddVertex('C')
+	graph.AddVertex('D')
+	graph.AddVertex('E')
+	graph.AddVertex('F')
+	graph.AddVertex('G')
+
+	graph.AddEdge('A', 'G')
+	graph.AddEdge('A', 'E')
+	graph.AddEdge('A', 'C')
+	graph.AddEdge('B', 'C')
+	graph.AddEdge('C', 'D')
+	graph.AddEdge('D', 'E')
+	graph.AddEdge('E', 'C')
+	graph.AddEdge('G', 'D')
+	graph.AddEdge('E', 'F')
+
+	fmt.Println("Graph: ", graph)
+	graph.RemoveVertex('A')
+	fmt.Println("Graph: ", graph)
+	fmt.Println()
 }
