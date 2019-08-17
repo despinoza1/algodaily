@@ -329,4 +329,15 @@ func main() {
 	graph.RemoveVertex('A')
 	fmt.Println("Graph: ", graph)
 	fmt.Println()
+
+	//Day 39: Max Product of three numbers
+	fmt.Println("Max Product in [0, 1, 2, 3] using three numbers: ",
+		questions.MaxProductOfThree([]int{0, 1, 2, 3}))
+	fmt.Println("Max Product in [-12, -7, -1, 11, 17] using three numbers: ",
+		questions.MaxProductOfThree([]int{-12, -7, -1, 11, 17}))
+	fmt.Println("Max Product in [0, 4, -9, 19, 7, -5] using three numbers: ",
+		questions.MaxProductOfThree([]int{0, 4, -9, 19, 7, -5}))
+	fmt.Println("Max Product in [-1, 9, 22, 3, -15, -7] using three numbers: ",
+		questions.MaxProductOfThree([]int{-1, 9, 22, 3, -15, -7}))
+	fmt.Println()
 }

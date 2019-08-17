@@ -249,3 +249,17 @@ func TwoSum(arr []int, goal int) [2]int {
 
 	return res
 }
+
+// MaxProductOfThree returns the max product from an array using 3 elements
+func MaxProductOfThree(arr []int) int {
+	sort.Ints(arr)
+
+	prod1 := arr[0] * arr[1] * arr[len(arr)-1]
+	prod2 := arr[len(arr)-1] * arr[len(arr)-2] * arr[len(arr)-3]
+
+	if prod1 > prod2 {
+		return prod1
+	}
+
+	return prod2
+}
