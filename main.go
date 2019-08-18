@@ -340,4 +340,11 @@ func main() {
 	fmt.Println("Max Product in [-1, 9, 22, 3, -15, -7] using three numbers: ",
 		questions.MaxProductOfThree([]int{-1, 9, 22, 3, -15, -7}))
 	fmt.Println()
+
+	//Day 40: Is a subsequence
+	fmt.Println("Is 'c' a subsequence of 'co'", questions.IsASubsequence("c", "co"))
+	fmt.Println("Is 'liblu' a subsequence of 'egi'", questions.IsASubsequence("liblu", "egi"))
+	fmt.Println("Is 'ej' a subsequence of 'sej'", questions.IsASubsequence("ej", "sej"))
+	fmt.Println("Is 'zumkidin' a subsequence of 'hu'", questions.IsASubsequence("zumkidin", "hu"))
+	fmt.Println("Is 'eviazauli' a subsequence of 'de'", questions.IsASubsequence("eviazauli", "de"))
 }

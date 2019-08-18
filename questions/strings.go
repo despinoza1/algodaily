@@ -196,3 +196,18 @@ func FirstNonRepeat(str string) string {
 
 	return ""
 }
+
+// IsASubsequence checks if sub is a subsequence of str
+func IsASubsequence(sub, str string) bool {
+	i := 0
+	for _, c := range str {
+		if rune(sub[i]) == c {
+			i++
+			if i == len(sub) {
+				return true
+			}
+		}
+	}
+
+	return false
+}
