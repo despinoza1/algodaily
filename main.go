@@ -347,4 +347,10 @@ func main() {
 	fmt.Println("Is 'ej' a subsequence of 'sej'", questions.IsASubsequence("ej", "sej"))
 	fmt.Println("Is 'zumkidin' a subsequence of 'hu'", questions.IsASubsequence("zumkidin", "hu"))
 	fmt.Println("Is 'eviazauli' a subsequence of 'de'", questions.IsASubsequence("eviazauli", "de"))
+	fmt.Println()
+
+	//Day 41: Shortest Palindrome
+	fmt.Println("Shortest Palindrome of 'bubble': ", questions.ShortestPalindrome("bubble"))
+	fmt.Println("Shortest Palindrome of 'dasndsadmx': ", questions.ShortestPalindrome("dasndsadmx"))
+	fmt.Println()
 }

@@ -2,6 +2,7 @@ package questions
 
 import (
 	"algodaily/questions/datastructure"
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -210,4 +211,27 @@ func IsASubsequence(sub, str string) bool {
 	}
 
 	return false
+}
+
+// ShortestPalindrome finds the shortest palindrome for str
+func ShortestPalindrome(str string) string {
+	j := 0
+	for i := len(str) - 1; i >= 0; i-- {
+		if str[i] == str[j] {
+			j++
+		}
+	}
+
+	if j == len(str) {
+		return str
+	}
+
+	substr := str[j:]
+	palindrome := []rune(str[j:])
+
+	for i, j := 0, len(palindrome)-1; i < j; i, j = i+1, j-1 {
+		palindrome[i], palindrome[j] = palindrome[j], palindrome[i]
+	}
+
+	return fmt.Sprintf("%s%s%s", string(palindrome), ShortestPalindrome(str[:j]), substr)
 }
