@@ -263,3 +263,22 @@ func MaxProductOfThree(arr []int) int {
 
 	return prod2
 }
+
+// SortedTwoSum returns the position of two numbers that sum to goal from a sorted array
+func SortedTwoSum(arr []int, goal int) []int {
+	i, j := 0, len(arr)-1
+
+	for i < j {
+		sum := arr[i] + arr[j]
+
+		if sum == goal {
+			return []int{i, j}
+		} else if sum > goal {
+			j--
+		} else {
+			i++
+		}
+	}
+
+	return []int{}
+}

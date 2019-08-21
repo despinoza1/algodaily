@@ -353,4 +353,13 @@ func main() {
 	fmt.Println("Shortest Palindrome of 'bubble': ", questions.ShortestPalindrome("bubble"))
 	fmt.Println("Shortest Palindrome of 'dasndsadmx': ", questions.ShortestPalindrome("dasndsadmx"))
 	fmt.Println()
+
+	//Day 42: Sorted Two Sum
+	fmt.Println("Elements that sum to 16 from [3, 6, 13, 14]:",
+		questions.SortedTwoSum([]int{3, 6, 13, 14}, 16))
+	fmt.Println("Elements that sum to 67 from [1, 9, 13, 20, 47]:",
+		questions.SortedTwoSum([]int{1, 9, 13, 20, 47}, 67))
+	fmt.Println("Elements that sum to 6 from [1, 9, 13, 20, 47]:",
+		questions.SortedTwoSum([]int{1, 9, 13, 20, 47}, 6))
+	fmt.Println()
 }
